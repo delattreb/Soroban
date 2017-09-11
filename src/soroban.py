@@ -7,16 +7,15 @@ import random
 
 
 class Soroban:
-    def __init__(self):
-        pass
+    def __init__(self, nbsize):
+        self.nbsize = nbsize
     
     def addition(self):
-        taillenb = 3
         strnb = ''
         nblist = []
         for i in range(0, 10):
             strnb = ''
-            for i in range(0, taillenb):
+            for i in range(0, self.nbsize):
                 if i == 0:
                    strnb += str(random.randrange(1, 10))
                 else:

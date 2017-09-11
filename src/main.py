@@ -16,7 +16,8 @@ def writeToCSV(line):
 
 nboperation = 10
 nbitem = 15
-soraban = Soroban()
+nbsize = 3
+soraban = Soroban(nbsize)
 listeoperation = []
 
 print('Start generation')
@@ -35,6 +36,6 @@ for j in range(0, 15):
         #print(listeoperation[i][j] + ';', end = '', flush = True)
         strline += listeoperation[i][j] + ';'
     writeToCSV(strline)
-    #print(' ')
+writeToCSV ('\r')
 
 print('Stop generation')
