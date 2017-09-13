@@ -27,7 +27,7 @@ for e in range(0, nboperation):
 writeToCSV(strline)
 
 for i in range(0, nboperation):
-    listeoperation.append(soraban.addition())
+    listeoperation.append(soraban.soustraction()) #Adddition or soustraction
 
 strline = ''
 for j in range(0, 15):
