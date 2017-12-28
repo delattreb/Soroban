@@ -14,28 +14,32 @@ def writeToCSV(line):
     file.close()
 
 
-nboperation = 10
-nbitem = 15
-nbsize = 3
-soraban = Soroban(nbsize)
+nboperation = 5
+nbitem = 10
+level = 5
+nbsoustraction = 4
+sorabano = Soroban()
 listeoperation = []
 
 print('Start generation')
 strline = ''
+# Generate title
 for e in range(0, nboperation):
     strline += 'N°' + str(e + 1) + ";"
 writeToCSV(strline)
 
+# Generate operation
 for i in range(0, nboperation):
-    listeoperation.append(soraban.soustraction()) #Adddition or soustraction
+    # listeoperation.append(sorabano.soustraction(nbsoustraction, nbitem, level)) #Adddition or soustraction
+    listeoperation.append(sorabano.addition(nbitem, level))  # Adddition or soustraction
 
+# generate csv file
 strline = ''
-for j in range(0, 15):
+for j in range(0, nbitem):
     strline = ''
     for i in range(0, len(listeoperation)):
-        #print(listeoperation[i][j] + ';', end = '', flush = True)
         strline += listeoperation[i][j] + ';'
     writeToCSV(strline)
-writeToCSV ('\r')
+writeToCSV('\r')
 
 print('Stop generation')
