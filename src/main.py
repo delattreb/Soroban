@@ -16,7 +16,7 @@ def writeToCSV(line):
 
 nboperation = 5
 nbitem = 10
-level = 5
+level = 3
 nbsoustraction = 4
 sorabano = Soroban()
 listeoperation = []
